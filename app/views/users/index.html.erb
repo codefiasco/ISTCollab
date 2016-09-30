@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>Users Database</h1>
+
+  <% @users.each do |t| %>
+    <!--  put each user information  -->
+    <%= link_to user_path(t) do %>
+      <div class="jumbotron">
+        <p><strong>Name:</strong> <%=t.name%></p>
+        <p><strong>Email:</strong> <%=t.email%></p>
+        <p><strong>Course:</strong> <%=t.course%></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

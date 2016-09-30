@@ -12,8 +12,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all()
+  end
+
+  def show
+    set_user
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :course, :phone_number,  :email, :interests, :skills,  :password)
   end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
 end
