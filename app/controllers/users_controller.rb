@@ -16,6 +16,11 @@ class UsersController < ApplicationController
     @users = User.all()
   end
 
+  def edit
+    set_user
+
+  end
+
   def show
     set_user
   end
