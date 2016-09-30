@@ -1,0 +1,8 @@
+<%= form_for @user do |t| %>
+  <%= t.text_field :name %>
+  <%= t.email_field :email %>
+  <%= t.text_field :course %>
+  <%= t.text_field :phone_number %>
+  <%= t.password_field :password_digest %>
+  <%= t.submit %>
+<% end %>
