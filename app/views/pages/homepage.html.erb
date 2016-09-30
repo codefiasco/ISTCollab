@@ -1,10 +1,14 @@
 <section id="home">
+<%= image_tag("ist-collab-logo.png", alt: "Logo-ISTCollab", class: "img-responsive home-logo") %>
 <div class="home-panel">
-<h1 align="center" class="home-title"><strong>ISTCollab</strong></h1>
+  <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <%= link_to "Log In", login_path(), class: "btn btn-primary btn-lg home-button-LogIn btn-block"  %>
+        </div>
+        <div class="col-md-6  col-sm-12">
+          <%= link_to "Sign Up", new_user_path(), class: "btn btn-success btn-lg home-button-SignUP btn-block" %>
+        </div>
+    </div>
 
-<%= link_to "Log In", login_path(), class: "btn btn-primary btn-lg home-button-LogIn "  %>
-<%= link_to "Sign Up", new_user_path(), class: "btn btn-success btn-lg home-button-SignUP" %>
 </div>
 </section>
-
-

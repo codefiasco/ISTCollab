@@ -4,8 +4,11 @@
 #home{
   width: 100%;
   min-height: 100vh;
-  background-image: asset-url("people-coffee-notes-tea.jpg");
+  background-image: asset-url("people.jpg");
   background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
+  padding: 75px 0 0;
 }
 
 .home-title{
@@ -15,26 +18,26 @@
 }
 
 .home-panel{
-  width: 600px;
+  width: 300px;
   position: absolute;
-  top: 30%;
+  bottom: 20%;
   left: 50%;
-  margin-left: -300px;
+  margin-left: -150px;
+}
+
+.home-logo{
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 0;
 }
 
 .home-button-LogIn {
     background-color: #008CBA; /* Blue */
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 45px;
     float: left;
 }
 
 .home-button-SignUP {
     background-color: #4CAF50; /* Green */
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 45px;
     float: right;
 }
 .container{
@@ -46,6 +49,6 @@
 
 }
 
-.img-responsive{
+.img-small{
   width: 100px;
 }
