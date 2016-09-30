@@ -1,3 +1,14 @@
+<div class="navigation">
 <h1>
   <%= @current_user.name %>
 </h1>
+
+  <img src="" alt="Logo-ISTCollab" class="img-responsive">
+
+  <ul>
+  <li><%= link_to "Profile", edit_user_path(@current_user), class: "btn btn-primary btn-sm button-Profile "  %></li>
+  <li><%= link_to "Users", users_path(), class: "btn btn-primary btn-sm button-Users "  %></li>
+  <li><%= link_to "Projects", users_path(), class: "btn btn-primary btn-sm button-Projects "  %></li>
+  <li><%= link_to "LogOut", logout_path(), method: "delete", class: "btn btn-primary btn-sm button-LogOut "  %></li>
+</ul>
+</div>
