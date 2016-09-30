@@ -1,2 +1,39 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#home{
+  width: 100%;
+  min-height: 100vh;
+  background-image: asset-url("people-coffee-notes-tea.jpg");
+  background-size: cover;
+}
+
+.home-title{
+  color: #008080;
+  font-size: 130px;
+  margin-bottom: 120px;
+}
+
+.home-panel{
+  width: 600px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -300px;
+}
+
+.home-button-LogIn {
+    background-color: #008CBA; /* Blue */
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 45px;
+    float: left;
+}
+
+.home-button-SignUP {
+    background-color: #4CAF50; /* Green */
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 45px;
+    float: right;
+}
