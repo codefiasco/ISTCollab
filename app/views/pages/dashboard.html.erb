@@ -32,4 +32,5 @@
       </nav>
 <h1>
   <%= @current_user.name %>
+  <%= image_tag @current_user.avatar.url(:medium) %>
 </h1>
