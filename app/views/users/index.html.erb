@@ -1,18 +1,25 @@
-<div class="container">
+<div class="container-fluid">
 
   <h1>Users Database</h1>
   <input type="text" id="search" autocomplete="off">
-  <div class="users-list">
   <% @users.each do |t| %>
-    <li>
-      <%= link_to user_path(t) do %>
-        <div class="jumbotron">
-          <p><strong>Name:</strong><span class="searchable"><%= t.name%></span></p>
-          <p><strong>Email:</strong><span class="searchable"><%= t.email%></span></p>
-          <p><strong>Course:</strong><span class="searchable"><%= t.course%></span></p>
+  <div class="row">
+        <div class="col-sm-3">
+          <%= link_to user_path(t) do %>
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive user-logo" %>
+                </div>
+                <div class="content">
+                    <p class="searchable"><%= t.name %> <br>
+                       <%= t.course %></p>
+                    <p><button type="button" class="btn btn-default">Profile</button></p>
+                </div>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-    </li>
+    </div>
   <% end %>
 </div>
 
