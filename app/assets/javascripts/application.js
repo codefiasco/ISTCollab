@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require_tree .
 //= require dist/bootstrap-tokenfield
+//= require typedjs/dist/typed.min

@@ -174,7 +174,7 @@ body{
   text-align: center;
   padding: 0;
   background-color: #284c79;
-  color: rgb(136, 172, 217);
+  color: #f0f0f0;
 }
 
 .card .header-bg {
@@ -201,7 +201,8 @@ body{
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 5px solid rgba(0,0,30,0.8);
+  border: 5px solid #f0f0f0;
+  margin-bottom: 10px;
 }
 
 .users-users{
@@ -256,3 +257,39 @@ span.tags
     }
 
 
+<<<<<<< HEAD
+=======
+    .typed-cursor{
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+.type-container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.type-elem{
+  color: #009de0;
+  left: 40%;
+  font-size: 26px;
+  font-weight: 900;
+}
+>>>>>>> ff904475efeed9f415df4b5c775ffd3f50b938cb
