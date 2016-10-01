@@ -1,35 +1,25 @@
 
-<table class="myTABLE">
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 col-md-offset-3 col-md-6">
+    	 <div class="well profile">
+            <div class="col-md12">
+                <div class="col-xs-12 col-sm-8">
+                    <h1 class="users-users"><p><%=@user.name%></p></h1>
+                    <p><strong>Email: </strong> <%=@user.email%></p>
+                    <p><strong>Phone: </strong> <%=@user.phone_number%></p>
+                    <p><strong>Course: </strong> <%=@user.course%></p>
+                    <p><strong>Interests: </strong> <%=@user.interests%></p>
+                    <p><strong>Skills: </strong> <%=@user.skills%></p>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <figure>
+                        <%= image_tag @current_user.avatar.url(:thumb), class: "img-circle image-responsive " %>
 
-  <tr>
-    <td> <div class="format-table-first-column"> <p><strong>Name:</strong></p> </div>  </td>
-    <td> <div class="format-table-second-column"> <p><%=@user.name%></p> </div> </td>
-  </tr>
-
-
-  <tr>
-    <td> <div class="format-table-first-column"> <p><strong>Email:</strong></p> </div> </td>
-    <td> <div class="format-table-second-column"> <p><%=@user.email%></p> </div> </td>
-  </tr>
-
-  <tr>
-    <td> <div class="format-table-first-column"> <p><strong>Phone:</strong></p> </div> </td>
-    <td> <div class="format-table-second-column"> <p><%=@user.phone_number%></p></div> </td>
-  </tr>
-
-  <tr>
-    <td> <div class="format-table-first-column"> <p><strong>Course:</strong></p> </div> </td>
-    <td> <div class="format-table-second-column"> <p><%=@user.course%></p></div> </td>
-  </tr>
-
-  <tr>
-    <td> <div class="format-table-first-column"> <p><strong>Interests:</strong></p> </div> </td>
-    <td> <div class="format-table-second-column"> <p><%=@user.interests%></p></div> </td>
-  </tr>
-
-  <tr>
-    <td> <div class="format-table-first-column"> <p><strong>Skills:</strong></p> </div> </td>
-    <td> <div class="format-table-second-column"> <p><%=@user.skills%></p></div> </td>
-  </tr>
-
-</table>
+                    </figure>
+                </div>
+            </div>
+    	 </div>
+		</div>
+	</div>
+</div>

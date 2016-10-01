@@ -1,14 +1,29 @@
 <section id="home">
 <%= image_tag("ist-collab-logo.png", alt: "Logo-ISTCollab", class: "img-responsive home-logo") %>
-<div class="home-panel">
-  <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <%= link_to "Log In", login_path(), class: "btn btn-primary btn-lg home-button-LogIn btn-block"  %>
-        </div>
-        <div class="col-md-6  col-sm-12">
-          <%= link_to "Sign Up", new_user_path(), class: "btn btn-success btn-lg home-button-SignUP btn-block" %>
-        </div>
-    </div>
-
+<div class="type-container">
+  <span class="type-elem"></span>
 </div>
+  <div class="home-panel">
+    <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <%= link_to "Log In", login_path(), class: "btn btn-primary btn-lg home-button-LogIn btn-block"  %>
+          </div>
+          <div class="col-md-6  col-sm-12">
+            <%= link_to "Sign Up", new_user_path(), class: "btn btn-success btn-lg home-button-SignUP btn-block" %>
+          </div>
+      </div>
+  </div>
 </section>
+<script>
+  $(function(){
+      $(".type-elem").typed({
+        strings: ["Create extra curricular projects.",
+                  "Have an Idea for a project? Just create one project? And choose your collaborators!",
+                  "Keep track of your favorite organizations workshops and competitions.",
+                  "Extend your network and learn new things."],
+        typeSpeed: 0,
+        loop: true,
+        showCursor: false
+      });
+  });
+</script>

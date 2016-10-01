@@ -174,7 +174,10 @@ body{
   text-align: center;
   padding: 0;
   background-color: #284c79;
-  color: rgb(136, 172, 217);
+  color: #f0f0f0;
+  width: 200px;
+  margin: 10px;
+  padding: 5px;
 }
 
 .card .header-bg {
@@ -201,22 +204,97 @@ body{
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 5px solid rgba(0,0,30,0.8);
+  border: 5px solid #f0f0f0;
+  margin-bottom: 10px;
 }
 
-.myTABLE{
-  text-align: left;
-  padding :30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 180%;
-  background : #efe none; color : #630;
+.users-users{
+  font-style: italic;
+  font-size: 45px;
+  color:$cor1;
 }
 
-.format-table-first-column{
-  color: $cor1;
+.profile
+{
+    font-size: 25px;
+    min-height: 300px;
+    display: inline-block;
+    }
+figcaption.ratings
+{
+    margin-top:200px;
+    }
+figcaption.ratings a
+{
+    color:#f1c40f;
+    font-size:11px;
+    }
+figcaption.ratings a:hover
+{
+    color:#f39c12;
+    text-decoration:none;
+    }
+.divider
+{
+    border-top:1px solid rgba(0,0,0,0.1);
+    }
+.emphasis
+{
+    border-top: 4px solid transparent;
+    }
+.emphasis:hover
+{
+    border-top: 4px solid #1abc9c;
+    }
+.emphasis h2
+{
+    margin-bottom:0;
+    }
+span.tags
+{
+    background: #1abc9c;
+    border-radius: 2px;
+    color: #f5f5f5;
+    font-weight: bold;
+    padding: 2px 4px;
+    }
+
+    .typed-cursor{
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+.type-container{
+  width: 50%;
+  margin: 0 auto;
 }
 
-.format-table-second-column{
-  color: $cor2;
+.type-elem{
+  color: #009de0;
+  left: 40%;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
