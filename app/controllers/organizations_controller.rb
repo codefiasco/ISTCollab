@@ -36,6 +36,7 @@ class OrganizationsController < ApplicationController
 
   def show
     set_organization
+    session[:organization_id] = @organization.id
   end
 
   def my_organizations

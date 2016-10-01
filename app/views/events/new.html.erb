@@ -1,0 +1,62 @@
+<section id="new-profile">
+  <div align="center" class="container form">
+
+    <h1 class="new-title-sign-up">New Event</h1>
+
+    <%= form_for @event, html: { multipart: true } do |t| %>
+
+      <div class="form-group">
+        <p>Title:</p>
+        <%= t.text_field :title , placeholder: "BreakingDev Hackathon" , class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p>Description:</p>
+        <%= t.text_area :description , rows: "4" , placeholder: "Esta competição tem o objetivo de proporcionar uma oportunidade de realizar um projeto na categoria de preferência do grupo (Mobile, Web ou Jogos) ..." , class: "form-control" %>
+      </div>
+
+<!--       <div class="form-group">
+        <%= label_tag :checkbox, "checkbox" %>
+        <%= check_box_tag("name", "value", false, class: "checkbox") %>
+      </div>
+ -->
+      <div class="form-group" >
+        <div class="col-md-6" align="left">
+          <label class="checkbox">
+            <input type="checkbox" id="webCheckbox" value="Web"> Web
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="mobileCheckbox" value="Mobile"> Mobile
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="softwareCheckbox" value="Software"> Software
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="hardwareCheckbox" value="Hardware"> Hardware
+          </label>
+        </div>
+        <div class="col-md-6" align="left">
+          <label class="checkbox">
+            <input type="checkbox" id="devopsCheckbox" value="DevOps"> DevOps
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="managementCheckbox" value="Management"> Management
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="telecomunicationsCheckbox" value="Telecommunications"> Telecommunications
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= t.file_field :avatar %>
+      </div>
+
+      <div class="form-group">
+        <%= t.submit "Create Event" , class: "btn btn-primary new-buttom-project" %>
+      </div>
+    <% end %>
+
+    <%= render "shared/errors", obj: @event %>
+  </div>
+</section>

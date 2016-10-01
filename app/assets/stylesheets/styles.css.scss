@@ -18,6 +18,11 @@ body{
   box-sizing: border-box;
 }
 
+.row{
+  max-width: 100%;
+  margin-right: 0;
+}
+
 /*-----------------------------HOMEPAGE-----------------------------------*/
 #new-profile{
    margin: left;
@@ -37,6 +42,10 @@ body{
   background-position: center center;
 }
 
+.container-max{
+  max-width: 500px;
+}
+
 #home, #signup{
   width: 100%;
   min-height: 100vh;
@@ -44,8 +53,8 @@ body{
   background-position: center center;
   box-sizing: border-box;
   padding: 75px 0 0;
-  margin: 10px 10px 10px 10px;
 }
+
 
 .home-title{
   color: $cor1;
@@ -320,6 +329,10 @@ span.tags
   font-size: 26px;
   font-weight: 900;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98192b1233f616d88b93a6d199743404e03bf6d3
 .flex-between{
   display: flex;
   justify-content: center;
@@ -336,4 +349,7 @@ span.tags
 .search-box{
   width: 250px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98192b1233f616d88b93a6d199743404e03bf6d3
