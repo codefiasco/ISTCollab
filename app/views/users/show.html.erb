@@ -1,6 +1,35 @@
-<p><strong>Name:</strong> <%=@user.name%></p>
-<p><strong>Email:</strong> <%=@user.email%></p>
-<p><strong>Phone:</strong> <%=@user.phone_number%></p>
-<p><strong>Course:</strong> <%=@user.course%></p>
-<p><strong>Interests:</strong> <%=@user.interests%></p>
-<p><strong>Skills:</strong> <%=@user.skills%></p>
+
+<table class="myTABLE">
+
+  <tr>
+    <td> <div class="format-table-first-column"> <p><strong>Name:</strong></p> </div>  </td>
+    <td> <div class="format-table-second-column"> <p><%=@user.name%></p> </div> </td>
+  </tr>
+
+
+  <tr>
+    <td> <div class="format-table-first-column"> <p><strong>Email:</strong></p> </div> </td>
+    <td> <div class="format-table-second-column"> <p><%=@user.email%></p> </div> </td>
+  </tr>
+
+  <tr>
+    <td> <div class="format-table-first-column"> <p><strong>Phone:</strong></p> </div> </td>
+    <td> <div class="format-table-second-column"> <p><%=@user.phone_number%></p></div> </td>
+  </tr>
+
+  <tr>
+    <td> <div class="format-table-first-column"> <p><strong>Course:</strong></p> </div> </td>
+    <td> <div class="format-table-second-column"> <p><%=@user.course%></p></div> </td>
+  </tr>
+
+  <tr>
+    <td> <div class="format-table-first-column"> <p><strong>Interests:</strong></p> </div> </td>
+    <td> <div class="format-table-second-column"> <p><%=@user.interests%></p></div> </td>
+  </tr>
+
+  <tr>
+    <td> <div class="format-table-first-column"> <p><strong>Skills:</strong></p> </div> </td>
+    <td> <div class="format-table-second-column"> <p><%=@user.skills%></p></div> </td>
+  </tr>
+
+</table>

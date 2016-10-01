@@ -8,10 +8,10 @@ $cor4: #343838;
 $cor5: #4CAF50;
 
 body{
-  background: #555;
+  background: #fff;
 }
-
-#home, #signup{
+/*-----------------------------HOMEPAGE-----------------------------------*/
+#home, #signup, #new-profile{
   width: 100%;
   min-height: 100vh;
   background-size: cover;
@@ -53,11 +53,13 @@ body{
     background-color: $cor5;
     float: right;
 }
+/*-----------------------------HOMEPAGE-------------------------------------*/
 
+/*-----------------------------NEW PROFILE-----------------------------------*/
 .new-signup-button {
   padding: 10px 25px;
   font-size: 200%;
-  background-color: $cor5;
+ /* border-radius: 2em;*/
 }
 
 .new-title-sign-up{
@@ -65,7 +67,9 @@ body{
   //font-family: verdana;
   font-size: 300%;
 }
+/*-----------------------------NEW PROFILE-----------------------------------*/
 
+/*-----------------------------EDIT PROFILE-----------------------------------*/
 .edit-title-profile{
   color: $cor4;
   //font-family: verdana;
@@ -77,10 +81,18 @@ body{
   font-size: 200%;
   background-color: $cor5;
 }
+/*-----------------------------EDIT PROFILE-----------------------------------*/
 
-.container{
-  max-width: 500px;
-  border-radius: 2em;
+/*-----------------------------NEW PROJECT-----------------------------------*/
+.new-buttom-project{
+  padding: 10px 25px;
+  font-size: 150%;
+}
+
+.new-title-project{
+    color: $cor4;
+  //font-family: verdana;
+  font-size: 300%;
 }
 
 .header{
@@ -88,13 +100,26 @@ body{
   height: 60px;
   padding: 5px;
 }
+/*-----------------------------NEW PROJECT-----------------------------------*/
 
-.navbar-logo{
+/*-----------------------------DASHBOARD-----------------------------------*/
+.img-small{
+  width: 100px;
+}
+
+  .navbar-logo{
   float: left;
   height: 100%;
   padding: 5px;
   display: block;
   max-width: 150px;
+}
+/*-----------------------------DASHBOARD-----------------------------------*/
+
+/*-----------------------------balloon-----------------------------------*/
+.navigation{
+  border-style: solid;
+
 }
 
 .form{
@@ -106,6 +131,12 @@ body{
   color: $cor3;
   font-size: 130%;
 }
+
+.container{
+  max-width: 500px;
+  border-radius: 2em;
+}
+/*-----------------------------balloon-----------------------------------*/
 
 .user-name{
   float: right;
@@ -157,6 +188,7 @@ body{
   /* This positions the canvas under the text */
   z-index: 1;
 }
+
 .card .avatar {
   position: relative;
   margin-top: 15px;
@@ -170,4 +202,21 @@ body{
   -moz-border-radius: 50%;
   border-radius: 50%;
   border: 5px solid rgba(0,0,30,0.8);
+}
+
+.myTABLE{
+  text-align: left;
+  padding :30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 180%;
+  background : #efe none; color : #630;
+}
+
+.format-table-first-column{
+  color: $cor1;
+}
+
+.format-table-second-column{
+  color: $cor2;
 }
