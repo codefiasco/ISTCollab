@@ -175,6 +175,9 @@ body{
   padding: 0;
   background-color: #284c79;
   color: #f0f0f0;
+  width: 200px;
+  margin: 10px;
+  padding: 5px;
 }
 
 .card .header-bg {
@@ -289,4 +292,10 @@ span.tags
   left: 40%;
   font-size: 26px;
   font-weight: 900;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
