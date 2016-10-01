@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1> My Organizations </h1>
+
+  <% @myOrganizations.each do |t| %>
+    <!--  put each organization information  -->
+    <%= link_to organization_path(t) do %>
+      <div class="jumbotron">
+        <p><strong>Name:</strong> <%=t.title%></p>
+        <p><strong>Description:</strong> <%=t.description%></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

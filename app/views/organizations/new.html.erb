@@ -1,0 +1,29 @@
+<section id="new-profile">
+  <div align="center" class="container form">
+
+    <h1 class="new-title-sign-up">New Organization</h1>
+
+    <%= form_for @organization, html: { multipart: true } do |t| %>
+
+      <div class="form-group">
+        <p>Name:</p>
+        <%= t.text_field :title , placeholder: "NEETI" , class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p>Description:</p>
+        <%= t.text_area :description , rows: "4" , placeholder: "Nucleo de estudantes do curso de engenharia de Telecomunicações e Informática" , class: "form-control" %>
+      </div>
+    
+      <div class="form-group">
+        <%= t.file_field :avatar %>
+      </div>
+    
+      <div class="form-group">
+        <%= t.submit "Create Organization" , class: "btn btn-primary new-buttom-project" %>
+      </div>
+    <% end %>
+
+    <%= render "shared/errors", obj: @organization %>
+  </div>
+</section>

@@ -14,6 +14,14 @@
     <ul class="nav navbar-nav nav-links">
       <li> <%= link_to "Users", users_path()  %></li>
       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Organizations <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "New Organization", new_organization_path()%></li>
+          <li><%= link_to "My Organizations", my_organizations_path()%></li>
+          <li><%= link_to "Show All Organizations", organizations_path()%></li>
+        </ul>
+      </li>
+      <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Projects <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><%= link_to "New Project", new_project_path()%></li>
