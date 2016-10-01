@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :projects
+  has_many :conversations, :foreign_key => :sender_id
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

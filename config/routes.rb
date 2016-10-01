@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :projects
+
+  resources :conversations do
+    resources :messages
+  end
 end

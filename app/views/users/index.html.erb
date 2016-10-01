@@ -2,22 +2,24 @@
 
   <h1>Users Database</h1>
   <input type="text" id="search" autocomplete="off">
-  <% @users.each do |t| %>
+  <% @users.each_with_index do |user, index| %>
   <div class="row">
         <div class="col-sm-3">
-          <%= link_to user_path(t) do %>
+          <%= link_to user_path(user) do %>
             <div class="card">
                 <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
                 <div class="avatar">
-                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive user-logo" %>
+                    <%= image_tag user.avatar.url(:thumb), class: "image-responsive user-logo" %>
                 </div>
                 <div class="content">
-                    <p class="searchable"><%= t.name %> <br>
-                       <%= t.course %></p>
+                    <p class="searchable"><%= user.name %> <br>
+                       <%= user.course %></p>
                     <p><button type="button" class="btn btn-default">Profile</button></p>
                 </div>
             </div>
           <% end %>
+          <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+                    "data-sid" => current_user.id, "data-rip" => user.id %>
         </div>
     </div>
   <% end %>
