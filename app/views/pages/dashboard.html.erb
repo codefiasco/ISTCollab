@@ -25,10 +25,8 @@
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
-
+          </div>
         </div>
       </nav>
-<h1>
-  <%= @current_user.name %>
-</h1>
+<h1><%= @current_user.name %></h1>
+<%= image_tag @current_user.avatar.url(:medium) %>

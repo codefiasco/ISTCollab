@@ -1,18 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#home{
+$cor1: #009de0;
+$cor2: #008c9e;
+$cor3: #005f6b;
+$cor4: #343838;
+$cor5: #4CAF50;
+
+body{
+  background: #555;
+}
+
+#home, #signup{
   width: 100%;
   min-height: 100vh;
-  background-image: asset-url("people.jpg");
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
   padding: 75px 0 0;
 }
 
+#home{
+  background-image: asset-url("people.jpg");
+}
+
 .home-title{
-  color: #008080;
+  color: $cor1;
   font-size: 130px;
   margin-bottom: 120px;
 }
@@ -32,16 +45,42 @@
 }
 
 .home-button-LogIn {
-    background-color: #008CBA; /* Blue */
+    background-color: $cor1;
     float: left;
 }
 
 .home-button-SignUP {
-    background-color: #4CAF50; /* Green */
+    background-color: $cor5;
     float: right;
 }
+
+.new-signup-button {
+  padding: 10px 25px;
+  font-size: 200%;
+  background-color: $cor5;
+}
+
+.new-title-sign-up{
+  color: $cor4;
+  //font-family: verdana;
+  font-size: 300%;
+}
+
+.edit-title-profile{
+  color: $cor4;
+  //font-family: verdana;
+  font-size: 300%;
+}
+
+.edit-buttom-save{
+  padding: 10px 25px;
+  font-size: 200%;
+  background-color: $cor5;
+}
+
 .container{
   max-width: 500px;
+  border-radius: 2em;
 }
 
 .navigation{
@@ -51,4 +90,14 @@
 
 .img-small{
   width: 100px;
+}
+
+.form{
+  background: rgba( 155, 155, 155, .65);
+}
+
+.form-group p{
+  text-align: left;
+  color: $cor3;
+  font-size: 130%;
 }

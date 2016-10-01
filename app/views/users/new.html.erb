@@ -1,32 +1,42 @@
-<%= render "shared/errors", obj: @user %>
-<div align="center" class="container">
 
-<h1>Sign Up</h1>
+  <div align="center" class="container form">
 
-<%= form_for @user do |t| %>
-  <div class="form-group">
-    <p>Name:</p>
-    <%= t.text_field :name , placeholder: "Random" , class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <p>Email:</p>
-    <%= t.email_field :email , placeholder: "email@example.com" , class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <p>Course:</p>
-    <%= t.text_field :course , placeholder: "LEE, METI ..." , class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <p>Phone Number:</p>
-    <%= t.text_field :phone_number , placeholder: "888 222 555" , class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <p>Password:</p>
-    <%= t.password_field :password , class: "form-control"%>
-  </div>
-  <div class="form-group">
-    <%= t.submit "Sign Up" , class: "btn btn-primary" %>
-  </div>
-<% end %>
+    <h1 class="new-title-sign-up">Sign Up</h1>
 
-</div>
+    <%= form_for @user, html: { multipart: true } do |t| %>
+
+      <div class="form-group">
+        <p>Name:</p>
+        <%= t.text_field :name , placeholder: "Random" , class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p>Email:</p>
+        <%= t.email_field :email , placeholder: "email@example.com" , class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p>Course:</p>
+        <%= t.text_field :course , placeholder: "LEE, METI ..." , class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p>Phone Number:</p>
+        <%= t.text_field :phone_number , placeholder: "888 222 555" , class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p>Password:</p>
+        <%= t.password_field :password , class: "form-control"%>
+      </div>
+
+      <div class="form-group">
+        <%= t.file_field :avatar %>
+      </div>
+      <div class="form-group ">
+        <%= t.submit "Sign Up" , class: "btn btn-primary new-signup-button" %>
+      </div>
+    <% end %>
+
+    <%= render "shared/errors", obj: @user %>
+  </div>
