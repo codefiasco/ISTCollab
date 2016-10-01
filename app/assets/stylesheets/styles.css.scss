@@ -88,8 +88,12 @@ body{
 
 }
 
-.img-small{
-  width: 100px;
+.navbar-logo{
+  float: left;
+  height: 100%;
+  padding: 5px;
+  display: block;
+  max-width: 150px;
 }
 
 .form{
