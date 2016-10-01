@@ -1,14 +1,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#home{
+$cor1: #E71D36;
+$cor2: #2EC4B6;
+$cor3: #EFFFE9;
+$cor4: #011627;
+
+#home, #signup{
   width: 100%;
   min-height: 100vh;
-  background-image: asset-url("people.jpg");
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
   padding: 75px 0 0;
+}
+
+#home{
+  background-image: asset-url("people.jpg");
+}
+
+#signup{
+  background-image: asset-url("books.jpg");
 }
 
 .home-title{
@@ -40,6 +52,18 @@
     background-color: #4CAF50; /* Green */
     float: right;
 }
+
+.new-signup-button{
+  padding: 10px 25px;
+  font-size: 200%;
+}
+
+.new-title-sign-up{
+  color: $cor2;
+  //font-family: verdana;
+  font-size: 300%;
+}
+
 .container{
   max-width: 500px;
 }
@@ -51,4 +75,14 @@
 
 .img-small{
   width: 100px;
+}
+
+.form{
+  background: rgba( 155, 155, 155, .65);
+}
+
+.form-group p{
+  text-align: left;
+  color: $cor2;
+  font-size: 130%;
 }
