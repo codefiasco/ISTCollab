@@ -10,7 +10,7 @@ $cor5: #4CAF50;
 body{
   background: #555;
 }
-
+/*-----------------------------HOMEPAGE-----------------------------------*/
 #home, #signup{
   width: 100%;
   min-height: 100vh;
@@ -53,7 +53,9 @@ body{
     background-color: $cor5;
     float: right;
 }
+/*-----------------------------HOMEPAGE-------------------------------------*/
 
+/*-----------------------------NEW PROFILE-----------------------------------*/
 .new-signup-button {
   padding: 10px 25px;
   font-size: 200%;
@@ -65,7 +67,9 @@ body{
   //font-family: verdana;
   font-size: 300%;
 }
+/*-----------------------------NEW PROFILE-----------------------------------*/
 
+/*-----------------------------EDIT PROFILE-----------------------------------*/
 .edit-title-profile{
   color: $cor4;
   //font-family: verdana;
@@ -77,19 +81,31 @@ body{
   font-size: 200%;
   background-color: $cor5;
 }
+/*-----------------------------EDIT PROFILE-----------------------------------*/
 
-.container{
-  max-width: 500px;
-  border-radius: 2em;
+/*-----------------------------NEW PROJECT-----------------------------------*/
+.new-buttom-project{
+  padding: 10px 25px;
+  font-size: 150%;
 }
+.new-title-project{
+    color: $cor4;
+  //font-family: verdana;
+  font-size: 300%;
+}
+/*-----------------------------NEW PROJECT-----------------------------------*/
 
+
+/*-----------------------------DASHBOARD-----------------------------------*/
+.img-small{
+  width: 100px;
+}
+/*-----------------------------DASHBOARD-----------------------------------*/
+
+/*-----------------------------balloon-----------------------------------*/
 .navigation{
   border-style: solid;
 
-}
-
-.img-small{
-  width: 100px;
 }
 
 .form{
@@ -101,3 +117,11 @@ body{
   color: $cor3;
   font-size: 130%;
 }
+
+.container{
+  max-width: 500px;
+  border-radius: 2em;
+}
+/*-----------------------------balloon-----------------------------------*/
+
+
