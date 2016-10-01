@@ -18,14 +18,21 @@ body{
   box-sizing: border-box;
 }
 
+.row{
+  max-width: 100%;
+  margin-right: 0;
+}
+
 /*-----------------------------HOMEPAGE-----------------------------------*/
-#home, #signup, #new-profile{
+#new-profile{
+   margin: left;
   width: 100%;
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
   padding: 75px 0 0;
+  margin: 10px 10px 10px 10px;
 }
 
 #home{
@@ -38,6 +45,16 @@ body{
 .container-max{
   max-width: 500px;
 }
+
+#home, #signup{
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
+  padding: 75px 0 0;
+}
+
 
 .home-title{
   color: $cor1;
@@ -141,6 +158,17 @@ body{
   background: rgba( 155, 155, 155, .65);
 }
 
+.new-profile-form{                          /* balloon Sign Up */
+  background: rgba( 155, 155, 155, .65);
+  margin: center;
+  width: 60%;
+}
+
+.text-right-SignUp{
+  color: $cor3;
+  font-size: 130%;
+  text-align: left;
+}
 .form-group p{
   text-align: left;
   color: $cor3;

@@ -1,3 +1,58 @@
-<p><strong>Name:</strong> <%=@organization.title%></p>
-<p><strong>Admin:</strong> <%=@organization.user.name%></p>
-<p><strong>Description:</strong> <%=@organization.description%></p>
+<div class="container-fluid">
+
+  <p><strong>Name:</strong> <%=@organization.title%></p>
+  <p><strong>Admin:</strong> <%=@organization.user.name%></p>
+  <p><strong>Description:</strong> <%=@organization.description%></p>
+
+  <% if @current_user.id == @organization.user.id  %>
+    <div class="row flex-between">
+      <%= link_to "New Event", new_event_path(), class: "btn btn-default" %>
+    </div>
+  <% end %>
+
+  <div class="row flex-between">
+      <% @organization.events.each do |t| %>
+              <div class="card">
+                  <div class="avatar">
+                      <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+                  </div>
+                  <div class="content">
+                      <p class="searchable">
+                        <%= t.title %> <br>
+                        <%= t.description %>
+                        <%= t.category %>
+                      </p>
+                      <p>
+                  </div>
+              </div>
+        <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var timeoutID = null;
+
+    function findMember(str) {
+      $('.users-list li').each(function(){
+        var text = $(this).text()
+
+        if(text.search(str) < 0)
+          $(this).fadeOut();
+          else
+          $(this).fadeIn();
+
+      });
+    }
+
+    $('#search').keyup(function(e) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+    });
+
+  });
+</script>
+
+
