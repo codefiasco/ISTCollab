@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <h1>IST Collabers</h1>
-  <input type="text" id="search" autocomplete="off">
+  <h1 align="center" class="sub-title">IST Collabers</h1>
+  <input type="text" id="search" autocomplete="off"class="center-block" >
   <div class="row flex-between">
     <% @users.each do |t| %>
             <div class="card">
@@ -27,23 +27,21 @@
     var timeoutID = null;
 
     function findMember(str) {
-      $('.users-list li').each(function(){
-        var text = $(this).text()
+      $('.searchable').each(function(){
+        var text = $(this).text().toLowerCase();
 
         if(text.search(str) < 0)
-          $(this).fadeOut();
-          else
-          $(this).fadeIn();
+          $(this).parent().parent().fadeOut();
+        else
+          $(this).parent().parent().fadeIn();
 
       });
     }
 
     $('#search').keyup(function(e) {
       clearTimeout(timeoutID);
-      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value.toLowerCase()), 500);
     });
 
   });
 </script>
-
-
