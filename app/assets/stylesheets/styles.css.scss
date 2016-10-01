@@ -9,7 +9,9 @@ $cor5: #4CAF50;
 
 body{
   background: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
+
 /*-----------------------------HOMEPAGE-----------------------------------*/
 #home, #signup, #new-profile{
   width: 100%;
@@ -21,7 +23,10 @@ body{
 }
 
 #home{
-  background-image: asset-url("people.jpg");
+  background: linear-gradient( rgba(100, 100, 155, 0.3), rgba(0, 0, 0, 0.3) ), asset-url("people.jpg");
+
+  background-size: cover;
+  background-position: center center;
 }
 
 .home-title{
