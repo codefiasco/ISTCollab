@@ -11,17 +11,29 @@ body{
   background: #fff;
 }
 /*-----------------------------HOMEPAGE-----------------------------------*/
-#home, #signup, #new-profile{
+#new-profile{
+   margin: left;
   width: 100%;
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
   padding: 75px 0 0;
+  margin: 10px 10px 10px 10px;
 }
 
 #home{
   background-image: asset-url("people.jpg");
+}
+
+#home, #signup{
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
+  padding: 75px 0 0;
+  margin: 10px 10px 10px 10px;
 }
 
 .home-title{
@@ -126,6 +138,17 @@ body{
   background: rgba( 155, 155, 155, .65);
 }
 
+.new-profile-form{                          /* balloon Sign Up */
+  background: rgba( 155, 155, 155, .65);
+  margin: center;
+  width: 60%;
+}
+
+.text-right-SignUp{
+  color: $cor3;
+  font-size: 130%;
+  text-align: left;
+}
 .form-group p{
   text-align: left;
   color: $cor3;
@@ -289,3 +312,4 @@ span.tags
   font-size: 26px;
   font-weight: 900;
 }
+
