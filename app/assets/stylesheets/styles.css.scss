@@ -254,3 +254,38 @@ span.tags
     font-weight: bold;
     padding: 2px 4px;
     }
+
+
+    .typed-cursor{
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+.type-container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.type-elem{
+  color: #009de0;
+  left: 40%;
+  font-size: 26px;
+  font-weight: 900;
+}
