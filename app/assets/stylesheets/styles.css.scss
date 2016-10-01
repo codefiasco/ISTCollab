@@ -174,7 +174,7 @@ body{
   text-align: center;
   padding: 0;
   background-color: #284c79;
-  color: rgb(136, 172, 217);
+  color: #f0f0f0;
 }
 
 .card .header-bg {
@@ -201,7 +201,8 @@ body{
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 5px solid rgba(0,0,30,0.8);
+  border: 5px solid #f0f0f0;
+  margin-bottom: 10px;
 }
 
 .users-users{
