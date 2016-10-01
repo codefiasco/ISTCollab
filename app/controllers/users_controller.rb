@@ -26,6 +26,8 @@ class UsersController < ApplicationController
   def update
     set_user
     require_same_user
+    params = user_params
+    params[:skills] = params[:skills].split(",")
     if @user.update(user_params)
       flash[:success] = "Your account was updated successfully"
       redirect_to root_path
@@ -40,7 +42,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :course, :phone_number,  :email, :interests, :skills,  :password, :avatar)
+    params.require(:user).permit(:name, :course, :phone_number,  :email, :interests, :skills,  :password, :avatar, :skills)
   end
 
   def set_user
