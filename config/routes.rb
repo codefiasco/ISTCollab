@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'my_projects', to: 'projects#my_projects'
 
+  get 'my_organizations', to: 'organizations#my_organizations'
+
   resources :users
   resources :projects
+  resources :events
+  resources :organizations
 end

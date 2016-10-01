@@ -1,0 +1,52 @@
+<div class="container-fluid">
+
+  <h1> All Organizations </h1>
+  <input type="text" id="search" autocomplete="off">
+  <% @organizations.each do |t| %>
+  <div class="row">
+        <div class="col-sm-3">
+          <%= link_to organization_path(t) do %>
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive user-logo" %>
+                </div>
+                <div class="content">
+                    <p class="searchable">
+                      <%= t.title %> <br>
+                      <%= t.description %>
+                    </p>
+                    <p><button type="button" class="btn btn-default">Profile</button></p>
+                </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var timeoutID = null;
+
+    function findMember(str) {
+      $('.users-list li').each(function(){
+        var text = $(this).text()
+
+        if(text.search(str) < 0)
+          $(this).fadeOut();
+          else
+          $(this).fadeIn();
+
+      });
+    }
+
+    $('#search').keyup(function(e) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+    });
+
+  });
+</script>
