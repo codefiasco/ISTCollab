@@ -21,7 +21,17 @@ class UsersController < ApplicationController
 
   def edit
     set_user
+  end
 
+  def update
+    set_user
+    require_same_user
+    if @user.update(user_params)
+      flash[:success] = "Your account was updated successfully"
+      redirect_to root_path
+    else
+      render 'edit'
+    end
   end
 
   def show
@@ -35,6 +45,13 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def require_same_user
+    if current_user != @user && !current_user.admin?
+      flash[:danger] = "You can only edit your own accout"
+      redirect_to root_path
+    end
   end
 
 end
