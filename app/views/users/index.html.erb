@@ -1,15 +1,43 @@
 <div class="container">
 
   <h1>Users Database</h1>
-
+  <input type="text" id="search" autocomplete="off">
+  <div class="users-list">
   <% @users.each do |t| %>
-    <!--  put each user information  -->
-    <%= link_to user_path(t) do %>
-      <div class="jumbotron">
-        <p><strong>Name:</strong> <%=t.name%></p>
-        <p><strong>Email:</strong> <%=t.email%></p>
-        <p><strong>Course:</strong> <%=t.course%></p>
-      </div>
-    <% end %>
+    <li>
+      <%= link_to user_path(t) do %>
+        <div class="jumbotron">
+          <p><strong>Name:</strong><span class="searchable"><%= t.name%></span></p>
+          <p><strong>Email:</strong><span class="searchable"><%= t.email%></span></p>
+          <p><strong>Course:</strong><span class="searchable"><%= t.course%></span></p>
+        </div>
+      <% end %>
+    </li>
   <% end %>
 </div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var timeoutID = null;
+
+    function findMember(str) {
+      $('.users-list li').each(function(){
+        var text = $(this).text()
+
+        if(text.search(str) < 0)
+          $(this).fadeOut();
+          else
+          $(this).fadeIn();
+
+      });
+    }
+
+    $('#search').keyup(function(e) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+    });
+
+  });
+</script>
