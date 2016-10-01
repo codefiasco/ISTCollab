@@ -12,6 +12,12 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.img-md{
+  max-width: 100px;
+  border: 1px solid rgb(0, 157, 224);
+  box-sizing: border-box;
+}
+
 /*-----------------------------HOMEPAGE-----------------------------------*/
 #home, #signup, #new-profile{
   width: 100%;
@@ -137,10 +143,6 @@ body{
   font-size: 130%;
 }
 
-.container{
-  max-width: 500px;
-  border-radius: 2em;
-}
 /*-----------------------------balloon-----------------------------------*/
 
 .user-name{
@@ -219,12 +221,10 @@ body{
   color:$cor1;
 }
 
-.profile
-{
-    font-size: 25px;
-    min-height: 300px;
-    display: inline-block;
-    }
+.profile{
+  min-height: 355px;
+  display: inline-block;
+}
 figcaption.ratings
 {
     margin-top:200px;
@@ -257,7 +257,7 @@ figcaption.ratings a:hover
     }
 span.tags
 {
-    background: #1abc9c;
+    background: rgb(0, 157, 224);
     border-radius: 2px;
     color: #f5f5f5;
     font-weight: bold;
@@ -292,7 +292,7 @@ span.tags
 }
 
 .type-elem{
-  color: #009de0;
+  color: #f0f0f0;
   left: 40%;
   font-size: 26px;
   font-weight: 900;
