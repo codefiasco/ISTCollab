@@ -8,10 +8,10 @@ $cor4: #343838;
 $cor5: #4CAF50;
 
 body{
-  background: #555;
+  background: #fff;
 }
 /*-----------------------------HOMEPAGE-----------------------------------*/
-#home, #signup{
+#home, #signup, #new-profile{
   width: 100%;
   min-height: 100vh;
   background-size: cover;
@@ -59,7 +59,7 @@ body{
 .new-signup-button {
   padding: 10px 25px;
   font-size: 200%;
-  background-color: $cor5;
+ /* border-radius: 2em;*/
 }
 
 .new-title-sign-up{
