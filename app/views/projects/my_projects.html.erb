@@ -2,15 +2,14 @@
 
   <h1>Projects Database</h1>
 
-  <% @projects.each do |t| %>
-    <!--  put each user information  -->
+  <% @myProjects.each do |t| %>
+    <!--  put each project information  -->
     <%= link_to project_path(t) do %>
       <div class="jumbotron">
         <p><strong>Title:</strong> <%=t.title%></p>
-        <p><strong>Creator:</strong> <%=t.user.name%></p>
+        <p><strong>Description:</strong> <%=t.description%></p>
         <p><strong>Categories:</strong> <%=t.category%></p>
         <p><strong>Skills:</strong> <%=t.skills%></p>
-        <p><strong>Description:</strong> <%=t.description%></p>
       </div>
     <% end %>
   <% end %>
