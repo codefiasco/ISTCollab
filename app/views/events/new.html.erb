@@ -21,33 +21,14 @@
       </div>
  -->
       <div class="form-group" >
-        <div class="col-md-6" align="left">
+      <% @categories.each do |category| %>
+        <div class="col-md-2" align="left">
           <label class="checkbox">
-            <input type="checkbox" id="webCheckbox" value="Web"> Web
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="mobileCheckbox" value="Mobile"> Mobile
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="softwareCheckbox" value="Software"> Software
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="hardwareCheckbox" value="Hardware"> Hardware
+            <%= check_box_tag category.name, category.id %>
           </label>
         </div>
-        <div class="col-md-6" align="left">
-          <label class="checkbox">
-            <input type="checkbox" id="devopsCheckbox" value="DevOps"> DevOps
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="managementCheckbox" value="Management"> Management
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="telecomunicationsCheckbox" value="Telecommunications"> Telecommunications
-          </label>
-        </div>
+        <% end %>
       </div>
-
       <div class="form-group">
         <%= t.file_field :avatar %>
       </div>
