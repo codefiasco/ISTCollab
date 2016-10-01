@@ -1,7 +1,8 @@
 class Organization < ActiveRecord::Base
   has_many :events
-
-  validates :title, presence: true,
+  belongs_to :user
+  
+  validates :title, presence: true, uniqueness: true,
                    length: { maximum: 50 }
 
   validates :description, length: { maximum: 500 }
