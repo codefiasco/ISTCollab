@@ -203,3 +203,20 @@ body{
   border-radius: 50%;
   border: 5px solid rgba(0,0,30,0.8);
 }
+
+.myTABLE{
+  text-align: left;
+  padding :30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 180%;
+  background : #efe none; color : #630;
+}
+
+.format-table-first-column{
+  color: $cor1;
+}
+
+.format-table-second-column{
+  color: $cor2;
+}
