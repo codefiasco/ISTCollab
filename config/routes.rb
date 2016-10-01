@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
 
   resources :users
+  resources :projects
 end
