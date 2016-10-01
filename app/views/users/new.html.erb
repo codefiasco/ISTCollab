@@ -1,4 +1,4 @@
-<section id="signup">
+
   <div align="center" class="container form">
 
     <h1 class="new-title-sign-up">Sign Up</h1>
@@ -10,25 +10,30 @@
         <p>Name:</p>
         <%= t.text_field :name , placeholder: "Random" , class: "form-control" %>
       </div>
+
       <div class="form-group">
         <p>Email:</p>
         <%= t.email_field :email , placeholder: "email@example.com" , class: "form-control" %>
       </div>
+
       <div class="form-group">
         <p>Course:</p>
         <%= t.text_field :course , placeholder: "LEE, METI ..." , class: "form-control" %>
       </div>
+
       <div class="form-group">
         <p>Phone Number:</p>
         <%= t.text_field :phone_number , placeholder: "888 222 555" , class: "form-control" %>
       </div>
+
       <div class="form-group">
         <p>Password:</p>
         <%= t.password_field :password , class: "form-control"%>
       </div>
+
       <div class="form-group ">
         <%= t.submit "Sign Up" , class: "btn btn-primary new-signup-button" %>
       </div>
+
     <% end %>
     </div>
-</section>

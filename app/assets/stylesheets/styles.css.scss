@@ -1,10 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$cor1: #E71D36;
-$cor2: #2EC4B6;
-$cor3: #EFFFE9;
-$cor4: #011627;
+$cor1: #009de0;
+$cor2: #008c9e;
+$cor3: #005f6b;
+$cor4: #343838;
+$cor5: #4CAF50;
+
+body{
+  background: #555;
+}
 
 #home, #signup{
   width: 100%;
@@ -19,12 +24,8 @@ $cor4: #011627;
   background-image: asset-url("people.jpg");
 }
 
-#signup{
-  background-image: asset-url("books.jpg");
-}
-
 .home-title{
-  color: #008080;
+  color: $cor1;
   font-size: 130px;
   margin-bottom: 120px;
 }
@@ -44,28 +45,42 @@ $cor4: #011627;
 }
 
 .home-button-LogIn {
-    background-color: #008CBA; /* Blue */
+    background-color: $cor1;
     float: left;
 }
 
 .home-button-SignUP {
-    background-color: #4CAF50; /* Green */
+    background-color: $cor5;
     float: right;
 }
 
-.new-signup-button{
+.new-signup-button {
   padding: 10px 25px;
   font-size: 200%;
+  background-color: $cor5;
 }
 
 .new-title-sign-up{
-  color: $cor2;
+  color: $cor4;
   //font-family: verdana;
   font-size: 300%;
 }
 
+.edit-title-profile{
+  color: $cor4;
+  //font-family: verdana;
+  font-size: 300%;
+}
+
+.edit-buttom-save{
+  padding: 10px 25px;
+  font-size: 200%;
+  background-color: $cor5;
+}
+
 .container{
   max-width: 500px;
+  border-radius: 2em;
 }
 
 .navigation{
@@ -83,6 +98,6 @@ $cor4: #011627;
 
 .form-group p{
   text-align: left;
-  color: $cor2;
+  color: $cor3;
   font-size: 130%;
 }
