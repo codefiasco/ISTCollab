@@ -1,1 +1,29 @@
+<div class="container">
+  <h1 align="center">Latest Projects</h1>
 
+  <div class="row">
+    <% if @latest_projects.count != 0 %>
+      <% @latest_projects.each do |project| %>
+        <div class="jumbotron col-xs-6 col-md-4">
+          <p><%= project.title %></p>
+        </div>
+      <% end %>
+    <% else %>
+      <h2>No projects to show!</h2>
+    <% end %>
+  </div>
+
+  <h1 align="center">Latest Events</h1>
+
+  <div class="row">
+    <% if @latest_events.count != 0 %>
+      <% @latest_events.each do |event| %>
+        <div class="card col-xs-6 col-md-4">
+            <p><%= event.title %></p>
+        </div>
+      <% end %>
+    <% else %>
+      <h2  align="center" class="jumbotron">No events to show!</h2>
+    <% end %>
+  </div>
+</div>
