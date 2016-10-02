@@ -1,5 +1,32 @@
-<p><strong>Title:</strong> <%=@project.title%></p>
-<p><strong>Creator:</strong> <%=@project.user.name%></p>
-<p><strong>Categories:</strong> <%=@project.category%></p>
-<p><strong>Skills:</strong> <%=@project.skills%></p>
-<p><strong>Description:</strong> <%=@project.description%></p>
+<div class="container-fluid">
+
+  <p><strong>Title:</strong> <%=@project.title%></p>
+  <p><strong>Creator:</strong> <%=@project.user.name%></p>
+  <p><strong>Categories:</strong> <%=@project.category%></p>
+  <p><strong>Skills:</strong> <%=@project.skills%></p>
+  <p><strong>Description:</strong> <%=@project.description%></p>
+
+  <% if @current_user.id == @project.user.id  %>
+
+    <div class="row flex-between">
+        <% @project.interests.users.each do |t| %>
+            <div class="card">
+                <div class="avatar">
+                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+                </div>
+                <div class="content">
+                    <%= link_to t.name , user_path(t), class: "btn btn-default" %>
+                </div>
+            </div>
+          <% end %>
+    </div>
+  <% else %>
+
+  <div class="row flex-between">
+      <%= link_to "Show Interest", interests_path , method: :post, class: "btn btn-default" %>
+    </div>
+
+  <% end %>
+
+
+</div>

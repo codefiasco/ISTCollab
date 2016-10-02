@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
 
   def show
     set_project
+#     session[:project_id] = @project.id
   end
 
   def my_projects

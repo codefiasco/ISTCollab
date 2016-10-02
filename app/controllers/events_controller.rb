@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new()
-    @categories = Category.all();
+    @categories = Category.all()
   end
 
   def create
@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to organization_path()
     else
-      render 'new'
+      redirect_to new_event_path()
     end
   end
 

@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :projects
   resources :events
   resources :organizations
+  resources :interests
 end
