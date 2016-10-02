@@ -35,12 +35,12 @@
 										<p><strong>Phone Number: </strong><%=@user.phone_number%></p>
                 </div>
             </div>
-						<% if @user.github_link %>
+						<% if @user.github_link && @user.github_link.length > 0 %>
 							<div class="col-xs-2 col-sm-1 ">
 								<a href="<%= @user.github_link %>" class="github-link social-link"></a>
 							</div>
 						<% end %>
-						<% if @user.linkedin_link %>
+						<% if @user.linkedin_link && @user.linkedin_link.length > 0 %>
 							<div class="col-xs-2 col-sm-1 <% if @user.github_link %>col-md-offset-1<%end%>">
 								<a href="<%= @user.linkedin_link %>" class="linkedin-link social-link"></a>
 							</div>
