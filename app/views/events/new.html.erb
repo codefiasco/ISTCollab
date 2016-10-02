@@ -20,16 +20,6 @@
         <%= check_box_tag("name", "value", false, class: "checkbox") %>
       </div>
  -->
-      <div class="form-group" >
-      <% @categories.each do |category| %>
-        <div class="col-md-2" align="left">
-          <label class="checkbox">
-            <%= check_box_tag category.name, category.id %>
-            <%= label_tag category.name %>
-          </label>
-        </div>
-        <% end %>
-      </div>
       <div class="form-group">
         <%= t.file_field :avatar %>
       </div>

@@ -49,7 +49,7 @@
 		</div>
 	</div>
   <!--  Events from the Organization -->
-
+	<% if @user.projects.any? %>
   <h1 align="center" class="sub-sub-title">Projects</h1>
   <div class="row flex-between">
       <% @user.projects.each do |t| %>
@@ -70,6 +70,7 @@
               </div>
         <% end %>
   </div>
+	<% end %>
 </div>
 
 <script type="text/javascript">
