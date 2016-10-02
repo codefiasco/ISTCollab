@@ -42,4 +42,52 @@
     	 </div>
 		</div>
 	</div>
+  <!--  Events from the Organization -->
+
+  <h1 align="center" class="sub-sub-title">Projects</h1>
+  <div class="row flex-between">
+      <% @user.projects.each do |t| %>
+              <div class="card proj">
+                  <div class="avatar">
+                      <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+                  </div>
+                  <div class="content">
+                      <p class="searchable">
+                        <%= t.title %> <br>
+                        <%= t.description %>
+                        <%= t.category %>
+                      </p>
+                      <p>
+
+                        <%= link_to "Details", project_path(t), class: "btn btn-default btn btn-primary " %>
+                  </div>
+              </div>
+        <% end %>
+  </div>
 </div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var timeoutID = null;
+
+    function findMember(str) {
+      $('.users-list li').each(function(){
+        var text = $(this).text()
+
+        if(text.search(str) < 0)
+          $(this).fadeOut();
+          else
+          $(this).fadeIn();
+
+      });
+    }
+
+    $('#search').keyup(function(e) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+    });
+
+  });
+</script>
