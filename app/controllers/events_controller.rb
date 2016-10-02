@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.organization = Organization.find(session[:organization_id])
     if @event.save
-      redirect_to organization_path()
+      redirect_to root_path()
     else
       redirect_to new_event_path()
     end
