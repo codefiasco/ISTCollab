@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20161002015632) do
     t.text    "description"
   end
 
+<<<<<<< HEAD
+  create_table "interests", force: :cascade do |t|
+    t.integer "project_id"
+  end
+
+=======
+>>>>>>> 4d0bf455e6b8ed80491e735b1050dc80316664f5
   create_table "organizations", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
