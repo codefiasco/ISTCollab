@@ -7,20 +7,8 @@
                 <div class="col-xs-12 col-sm-8">
                     <h2> <%=@project.title%></h2>
                     <p><strong>Created by: </strong><%= link_to @project.user.name, user_path(@project.user) %></p>
-										<% if @interests %>
-                    <p><strong>Categories: </strong>
-											<% @interests.each do |interest| %>
-                        <span class="tags interest"><%= interest %></span>
-											<% end %>
-                    </p>
-										<% end %>
-										<% if @skills %>
-                    <p><strong>Skills: </strong>
-											<% @skills.each do |skill| %>
-                        <span class="tags"><%= skill %></span>
-											<% end %>
-                    </p>
-										<% end %>
+                    <p><strong>Categories:</strong> <%=@project.category%></p>
+                    <p><strong>Skills:</strong> <%=@project.skills%></p>
                     <p><strong>Description:</strong> <%=@project.description%></p>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center">

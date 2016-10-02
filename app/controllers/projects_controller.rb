@@ -25,7 +25,15 @@ class ProjectsController < ApplicationController
   def show
     set_project
     @skills = @project.skills.split(',') if @project.skills
-    @interests = @project.category.split(',') if @project.category
+    interests = @project.interests
+    if interests
+      @interests = interests.split(',')
+      @people = []
+      @interests.each do |user|
+        @people << User.find(user.to_i)
+      end
+    end
+    @category = @project.category.split(',') if @project.category
     session[:project_id] = @project.id
   end
 
