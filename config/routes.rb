@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'my_organizations', to: 'organizations#my_organizations'
 
   post 'interested', to: 'projects#interest'
+  delete 'uninterested', to: 'projects#uninterest'
 
   resources :users
   resources :projects

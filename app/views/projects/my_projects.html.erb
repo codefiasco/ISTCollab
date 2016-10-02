@@ -1,16 +1,19 @@
-<div class="container">
-
-  <h1>Projects Database</h1>
-
-  <% @myProjects.each do |t| %>
-    <!--  put each project information  -->
-    <%= link_to project_path(t) do %>
-      <div class="jumbotron">
-        <p><strong>Title:</strong> <%=t.title%></p>
-        <p><strong>Description:</strong> <%=t.description%></p>
-        <p><strong>Categories:</strong> <%=t.category%></p>
-        <p><strong>Skills:</strong> <%=t.skills%></p>
-      </div>
-    <% end %>
-  <% end %>
+<div class="container-fluid">
+  <h1 align="center" class="sub-title"><%= @current_user.name%>'s Projects</h1>
+  <input type="text" id="search" autocomplete="off"class="center-block" >
+  <div class="flex-between">
+    <% @myProjects.each do |t| %>
+            <div class="card proj">
+              <div class="avatar">
+                  <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+              </div>
+                <div class="content">
+                    <p class="searchable">
+                      <strong><%= t.title %></strong> <br>
+                      Created by: <%= t.user.name %></p>
+                    <%= link_to "Details", project_path(t), class: "btn btn-default" %>
+                </div>
+            </div>
+      <% end %>
+  </div>
 </div>

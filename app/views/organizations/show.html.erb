@@ -1,10 +1,8 @@
 <div class="container-fluid">
-
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-    	 <div class="well profile">
+    	 <div class="well profile org">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
                     <h2> <%=@organization.title%></h2>
@@ -24,42 +22,24 @@
                 <div class="col-xs-12 col-sm-4">
                     <h3><strong>Contacts</strong></h3>
                     <p><strong>Email: </strong><%=@organization .user.email%></p>
-										<p><strong>Telephone: </strong><%=@organization .user.phone_number%></p>
+										<p><strong>Phone Number: </strong><%=@organization .user.phone_number%></p>
 
                       <% if @current_user.id == @organization .user.id  %>
                 <% end %>
 
                 </div>
             </div>
-         <div class="row">
-           <div class="col-xs-2 center-block col-xs-offset-4">
-           <%= link_to "New Event", new_event_path(), class: "btn btn-default btn btn-primary " %>
-         </div>
-         </div>
+						<% if @current_user.id == @organization.user.id  %>
+             <div class="row">
+               <div align="center" class="center-block col-xs-offset-4">
+                 <%= link_to "New Event", new_event_path(), class: "btn btn-default btn btn-primary " %>
+             </div>
+             </div>
+				 <% end %>
     	 </div>
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div class="row flex-between">
       <% @organization.events.each do |t| %>
@@ -74,6 +54,8 @@
                         <%= t.category %>
                       </p>
                       <p>
+
+                        <%= link_to "Details", event_path(t), class: "btn btn-default btn btn-primary " %>
                   </div>
               </div>
         <% end %>
@@ -105,5 +87,3 @@
 
   });
 </script>
-
-

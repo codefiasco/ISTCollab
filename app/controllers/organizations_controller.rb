@@ -46,7 +46,7 @@ class OrganizationsController < ApplicationController
 
   private
   def organization_params
-    params.require(:organization).permit(:title, :description, :interests, :skills)
+    params.require(:organization).permit(:title, :description, :interests, :skills, :avatar)
   end
 
   def set_organization

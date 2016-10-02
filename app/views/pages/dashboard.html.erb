@@ -1,29 +1,41 @@
-<div class="container">
-  <h1 align="center">Latest Projects</h1>
-
-  <div class="row">
-    <% if @latest_projects.count != 0 %>
-      <% @latest_projects.each do |project| %>
-        <div class="jumbotron col-xs-6 col-md-4">
-          <p><%= project.title %></p>
-        </div>
-      <% end %>
-    <% else %>
-      <h2>No projects to show!</h2>
-    <% end %>
+<% if @latest_projects.count != 0 %>
+  <div class="container-fluid">
+    <h1 align="center" class="sub-title">Latest Projects</h1>
+    <div class="flex-between">
+      <% @latest_projects.each do |t| %>
+              <div class="card proj">
+                <div class="avatar">
+                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+                </div>
+                  <div class="content">
+                      <p class="searchable">
+                        <strong><%= t.title %></strong> <br>
+                        Created by: <%= t.user.name %></p>
+                      <%= link_to "Details", project_path(t), class: "btn btn-default" %>
+                  </div>
+              </div>
+        <% end %>
+    </div>
   </div>
+<% end %>
 
-  <h1 align="center">Latest Events</h1>
 
-  <div class="row">
-    <% if @latest_events.count != 0 %>
-      <% @latest_events.each do |event| %>
-        <div class="card col-xs-6 col-md-4">
-            <p><%= event.title %></p>
-        </div>
-      <% end %>
-    <% else %>
-      <h2  align="center" class="jumbotron">No events to show!</h2>
-    <% end %>
+<% if @latest_events.count != 0 %>
+  <div class="container-fluid">
+    <h1 align="center" class="sub-title">Latest Events</h1>
+    <div class="flex-between">
+      <% @latest_events.each do |t| %>
+              <div class="card event">
+                <div class="avatar">
+                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+                </div>
+                  <div class="content">
+                      <p class="searchable">
+                        <strong><%= t.title %></strong> <br>
+                      <%= link_to "Details", user_path(t), class: "btn btn-default" %>
+                  </div>
+              </div>
+        <% end %>
+    </div>
   </div>
-</div>
+<% end %>

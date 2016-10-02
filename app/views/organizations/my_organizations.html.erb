@@ -1,14 +1,45 @@
-<div class="container">
-
-  <h1> My Organizations </h1>
-
-  <% @myOrganizations.each do |t| %>
-    <!--  put each organization information  -->
-    <%= link_to organization_path(t) do %>
-      <div class="jumbotron">
-        <p><strong>Name:</strong> <%=t.title%></p>
-        <p><strong>Description:</strong> <%=t.description%></p>
-      </div>
-    <% end %>
-  <% end %>
+<div class="container-fluid">
+  <h1 align="center" class="sub-title"><%= @current_user.name %>'s Organizations</h1>
+  <input type="text" id="search" autocomplete="off"class="center-block" >
+  <div class="flex-between">
+    <% @myOrganizations.each do |t| %>
+            <div class="card org">
+                <div class="avatar">
+                    <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+                </div>
+                <div class="content">
+                    <p class="searchable">
+                      <strong><%= t.title %></strong> <br>
+                      <%= t.description %></p>
+                    <%= link_to "Profile", organization_path(t), class: "btn btn-default" %>
+                </div>
+            </div>
+      <% end %>
+  </div>
 </div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var timeoutID = null;
+
+    function findMember(str) {
+      $('.users-list li').each(function(){
+        var text = $(this).text()
+
+        if(text.search(str) < 0)
+          $(this).fadeOut();
+          else
+          $(this).fadeIn();
+
+      });
+    }
+
+    $('#search').keyup(function(e) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+    });
+
+  });
+</script>
