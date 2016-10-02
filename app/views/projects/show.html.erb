@@ -6,7 +6,7 @@
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
                     <h2> <%=@project.title%></h2>
-                    <p><strong>Created by:</strong> <%=@project.user.name%></p>
+                    <p><strong>Created by: </strong><%= link_to @project.user.name, user_path(@project.user) %></p>
                     <p><strong>Categories:</strong> <%=@project.category%></p>
                     <p><strong>Skills:</strong> <%=@project.skills%></p>
                     <p><strong>Description:</strong> <%=@project.description%></p>
@@ -72,4 +72,4 @@
 		</div>
 	</div>
 </div>
-</div>
+
