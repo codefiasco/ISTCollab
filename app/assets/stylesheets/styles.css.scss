@@ -26,14 +26,28 @@ body{
   background-color: #F6B352;
 }
 
+.event.profile h2{
+  color: #F6B352;
+  text-decoration: underline;
+}
+
 .org.card{
   background-color: #E71D36;
+}
+
+.org.profile h2{
+  color: #E71D36;
+  text-decoration: underline;
 }
 
 .proj.card{
   background-color: #8FBC94;
 }
 
+.proj.profile h2{
+  color: #8FBC94;
+  text-decoration: underline;
+}
 /*-----------------------------HOMEPAGE-----------------------------------*/
 #new-profile{
    margin: left;
