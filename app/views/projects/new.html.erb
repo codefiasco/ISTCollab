@@ -15,11 +15,11 @@
     </div>
     <div class="form-group">
       <p>Category:</p>
-      <%= t.text_field :category , placeholder: "Web Development, Mobile Development ..." , class: "form-control" %>
+      <%= t.text_field :category , placeholder: "Web Development, Mobile Development ..." , class: "form-control", id: "category" %>
     </div>
     <div class="form-group">
       <p>Skills:</p>
-      <%= t.text_field :skills , placeholder: "Android, Ruby On Rails" , class: "form-control" %>
+      <%= t.text_field :skills , placeholder: "Android, Ruby On Rails" , class: "form-control", id: "skills" %>
     </div>
     <div class="form-group">
       <%= t.file_field :avatar %>
@@ -30,3 +30,10 @@
   <% end %>
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#skills').tokenfield()
+    $('#category').tokenfield()
+  });
+</script>
