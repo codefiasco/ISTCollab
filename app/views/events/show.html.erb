@@ -22,6 +22,13 @@
 										<p><strong>Phone Number: </strong><%=@event.organization.user.phone_number%></p>
                 </div>
             </div>
+						<% if @current_user.id == @event.organization.user.id  %>
+	             <div class="row">
+	               <div align="center" class="center-block col-xs-offset-4">
+	                 <%= link_to "Close Event", event_path(@event), method: "delete", class: "btn btn-default btn-danger btn-primary " %>
+	             </div>
+	             </div>
+					 <% end %>
     	 </div>
 		</div>
 	</div>
