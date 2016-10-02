@@ -28,6 +28,12 @@ class EventsController < ApplicationController
     set_event
   end
 
+  def destroy
+    event = Event.find(set_event)
+    event.destroy
+    redirect_to events_path()
+  end
+
   private
   def event_params
     params.require(:event).permit(:title, :description, :skills, :category, :avatar)

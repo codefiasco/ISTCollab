@@ -50,7 +50,7 @@ class ProjectsController < ApplicationController
     end
 
     project.save
-    redirect_to projects_path
+    redirect_to project_path(project)
   end
 
   def uninterest
@@ -64,7 +64,7 @@ class ProjectsController < ApplicationController
     project.interests = interests
     project.interests = nil unless project.interests.length > 0
     project.save
-    redirect_to projects_path
+    redirect_to project_path(project)
   end
 
   private
