@@ -33,21 +33,6 @@ ActiveRecord::Schema.define(version: 20161002015632) do
     t.text    "description"
   end
 
-  create_table "interests", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.text     "body"
-    t.integer  "conversation_id"
-    t.integer  "user_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
   create_table "organizations", force: :cascade do |t|
     t.string   "title"
     t.text     "description"

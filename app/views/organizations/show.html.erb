@@ -1,14 +1,63 @@
 <div class="container-fluid">
 
-  <p><strong>Name:</strong> <%=@organization.title%></p>
-  <p><strong>Admin:</strong> <%=@organization.user.name%></p>
-  <p><strong>Description:</strong> <%=@organization.description%></p>
 
-  <% if @current_user.id == @organization.user.id  %>
-    <div class="row flex-between">
-      <%= link_to "New Event", new_event_path(), class: "btn btn-default" %>
-    </div>
-  <% end %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    	 <div class="well profile">
+            <div class="col-sm-12">
+                <div class="col-xs-12 col-sm-8">
+                    <h2><strong>Name:</strong> <%=@organization.title%></h2>
+                    <p><strong>Admin:</strong> <%=@organization.user.name%></p>
+                    <p><strong>Description:</strong> <%=@organization.description%></p>
+
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <figure>
+                          <%= image_tag @organization.avatar.url(:thumb), class: "img-md image-responsive " %>
+                </figure>
+                </div>
+                </div>
+                <div class="col-xs-12 divider">
+                <div class="col-xs-12 col-sm-4">
+                    <h3><strong>Contacts</strong></h3>
+                    <p><strong>Email: </strong><%=@organization .user.email%></p>
+										<p><strong>Telephone: </strong><%=@organization .user.phone_number%></p>
+
+                      <% if @current_user.id == @organization .user.id  %>
+                <% end %>
+
+                </div>
+            </div>
+         <div class="row">
+           <div class="col-xs-2 center-block col-xs-offset-4">
+           <%= link_to "New Event", new_event_path(), class: "btn btn-default btn btn-primary " %>
+         </div>
+         </div>
+    	 </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="row flex-between">
       <% @organization.events.each do |t| %>
