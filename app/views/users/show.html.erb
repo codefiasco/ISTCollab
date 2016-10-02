@@ -8,12 +8,13 @@
                     <h2><%=@user.name%></h2>
                     <p><strong>Course: </strong><%=@user.course%></p>
                     <p><strong>Interests: </strong> Web Development, Dev Ops</p>
+										<% if @skills %>
                     <p><strong>Skills: </strong>
-                        <span class="tags">html5</span>
-                        <span class="tags">css3</span>
-                        <span class="tags">jquery</span>
-                        <span class="tags">bootstrap3</span>
+											<% @skills.each do |skill| %>
+                        <span class="tags"><%= skill %></span>
+											<% end %>
                     </p>
+										<% end %>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center">
                     <figure>

@@ -38,6 +38,7 @@ class UsersController < ApplicationController
 
   def show
     set_user
+    @skills = @user.skills.split(',') if @user.skills
   end
 
   private
