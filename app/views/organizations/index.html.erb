@@ -2,8 +2,8 @@
   <h1 align="center" class="sub-title">Organizations</h1>
   <div align="center">
     <div class="inner-addon left-addon search-box">
-    <i class="glyphicon glyphicon-search"></i>
-    <input type="text" id="search" placeholder="Search" autocomplete="off" class="form-control center-block" >
+      <i class="glyphicon glyphicon-search"></i>
+      <input type="text" id="search" placeholder="Search" autocomplete="off" class="form-control center-block">
     </div>
   </div>
   <div class="flex-between">
@@ -22,3 +22,32 @@
       <% end %>
   </div>
 </div>
+<<<<<<< HEAD
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var timeoutID = null;
+
+    function findMember(str) {
+      $('.users-list li').each(function(){
+        var text = $(this).text()
+
+        if(text.search(str) < 0)
+          $(this).fadeOut();
+          else
+          $(this).fadeIn();
+
+      });
+    }
+
+    $('#search').keyup(function(e) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
+    });
+
+  });
+</script>
+=======
+>>>>>>> 470f86e6a02ec244e42876c4e3dd3be8406a9ce6
