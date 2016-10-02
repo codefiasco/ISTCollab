@@ -1,14 +1,14 @@
 <div class="container-fluid">
-  <h1 align="center" class="sub-title">Organizations</h1>
+  <h1 align="center" class="sub-title">Events</h1>
   <div align="center">
     <div class="inner-addon left-addon search-box">
-    <i class="glyphicon glyphicon-search"></i>
-    <input type="text" id="search" placeholder="Search" autocomplete="off" class="form-control center-block" >
+      <i class="glyphicon glyphicon-search"></i>
+      <input type="text" id="search" placeholder="Search" autocomplete="off" class="form-control center-block">
     </div>
   </div>
   <div class="flex-between">
-    <% @organizations.each do |t| %>
-        <div class="card org">
+    <% @events.each do |t| %>
+        <div class="card event">
           <div class="avatar">
             <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
           </div>
@@ -16,7 +16,7 @@
             <p class="searchable">
               <strong><%= t.title %></strong> <br>
               <%= t.description %></p>
-            <%= link_to "Profile", organization_path(t), class: "btn btn-default" %>
+            <%= link_to "Details", event_path(t), class: "btn btn-default" %>
           </div>
         </div>
       <% end %>

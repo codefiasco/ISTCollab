@@ -381,5 +381,42 @@ span.tags
   float: left;
 }
 
-.token-input{
+.social-link{
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
+
+.github-link{
+  background-image: asset-url('GitHub.svg');
+  background-size: cover;
+}
+
+.linkedin-link{
+  background-image: asset-url('LinkedIn.svg');
+  background-size: 36px 36px;
+}
+
+/* For search box ... */
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }

@@ -28,9 +28,10 @@ class EventsController < ApplicationController
     set_event
   end
 
-  def my_projects
-    current_user
-    @myProjects = @current_user.projects
+  def destroy
+    event = Event.find(set_event)
+    event.destroy
+    redirect_to events_path()
   end
 
   private

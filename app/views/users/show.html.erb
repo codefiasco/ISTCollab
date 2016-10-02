@@ -29,6 +29,16 @@
 										<p><strong>Phone Number: </strong><%=@user.phone_number%></p>
                 </div>
             </div>
+						<% if @user.github_link %>
+							<div class="col-xs-2 col-sm-1 ">
+								<a href="<%= @user.github_link %>" class="github-link social-link"></a>
+							</div>
+						<% end %>
+						<% if @user.linkedin_link %>
+							<div class="col-xs-2 col-sm-1 <% if @user.github_link %>col-md-offset-1<%end%>">
+								<a href="<%= @user.linkedin_link %>" class="linkedin-link social-link"></a>
+							</div>
+						<% end %>
     	 </div>
 		</div>
 	</div>
