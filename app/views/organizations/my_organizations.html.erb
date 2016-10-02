@@ -3,7 +3,7 @@
   <input type="text" id="search" autocomplete="off"class="center-block" >
   <div class="flex-between">
     <% @myOrganizations.each do |t| %>
-            <div class="card">
+            <div class="card org">
                 <div class="avatar">
                     <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
                 </div>
