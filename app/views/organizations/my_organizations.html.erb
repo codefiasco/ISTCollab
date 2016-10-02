@@ -25,26 +25,26 @@
 
 <script type="text/javascript">
 
-  $(document).ready(function() {
+$(document).ready(function() {
 
-    var timeoutID = null;
+  var timeoutID = null;
 
-    function findMember(str) {
-      $('.users-list li').each(function(){
-        var text = $(this).text()
+  function findMember(str) {
+    $('.searchable').each(function(){
+      var text = $(this).text().toLowerCase();
 
-        if(text.search(str) < 0)
-          $(this).fadeOut();
-          else
-          $(this).fadeIn();
+      if(text.search(str) < 0)
+        $(this).parent().parent().fadeOut();
+      else
+        $(this).parent().parent().fadeIn();
 
-      });
-    }
-
-    $('#search').keyup(function(e) {
-      clearTimeout(timeoutID);
-      timeoutID = setTimeout(findMember.bind(undefined, e.target.value), 500);
     });
+  }
 
+  $('#search').keyup(function(e) {
+    clearTimeout(timeoutID);
+    timeoutID = setTimeout(findMember.bind(undefined, e.target.value.toLowerCase()), 500);
   });
+
+});
 </script>
