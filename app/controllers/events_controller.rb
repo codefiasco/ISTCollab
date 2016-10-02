@@ -28,11 +28,6 @@ class EventsController < ApplicationController
     set_event
   end
 
-  def my_projects
-    current_user
-    @myProjects = @current_user.projects
-  end
-
   private
   def event_params
     params.require(:event).permit(:title, :description, :skills, :category, :avatar)
