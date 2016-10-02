@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 20161002015632) do
     t.string "name"
   end
 
-  create_table "conversations", force: :cascade do |t|
-    t.integer  "sender_id"
-    t.integer  "recipient_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
-    t.index ["sender_id"], name: "index_conversations_on_sender_id"
-  end
-
   create_table "events", force: :cascade do |t|
     t.string  "title"
     t.string  "category"
@@ -33,13 +24,11 @@ ActiveRecord::Schema.define(version: 20161002015632) do
     t.text    "description"
   end
 
-<<<<<<< HEAD
   create_table "interests", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "project_id"
   end
 
-=======
->>>>>>> 4d0bf455e6b8ed80491e735b1050dc80316664f5
   create_table "organizations", force: :cascade do |t|
     t.string   "title"
     t.text     "description"

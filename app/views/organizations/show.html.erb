@@ -8,7 +8,9 @@
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
                     <h2> <%=@organization.title%></h2>
-                    <p><strong>Admin:</strong> <%=@organization.user.name%></p>
+
+                    <p><strong>Admin:</strong><%= link_to @organization.user.name, user_path(@organization.user) %></p>
+
                     <p><strong>Description:</strong> <%=@organization.description%></p>
 
                 </div>
