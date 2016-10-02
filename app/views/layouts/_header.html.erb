@@ -10,7 +10,9 @@
   </div>
   <div class="navbar-collapse collapse">
     <%= image_tag @current_user.avatar.url(:thumb), class: "image-responsive user-logo" %>
-    <span class="user-name"><%= @current_user.name %></span>
+
+
+    <span class="user-name"><%= link_to @current_user.name, edit_user_path(@current_user) %></span>
     <ul class="nav navbar-nav nav-links">
       <li> <%= link_to "Users", users_path()  %></li>
       <li class="dropdown">
@@ -29,7 +31,6 @@
           <li><%= link_to "Show All Projects", projects_path()%></li>
         </ul>
       </li>
-      <li> <%= link_to "Profile", edit_user_path(@current_user) %></li>
       <li> <%= link_to "Log Out", logout_path(), method: "delete" %></li>
     </ul>
 </div>

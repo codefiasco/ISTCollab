@@ -7,7 +7,7 @@
   <p><strong>Description:</strong> <%=@project.description%></p>
 
   <% if @current_user.id == @project.user.id  %>
-
+    <% if @people %>
     <div class="row flex-between">
         <% @people.each do |t| %>
             <div class="card">
@@ -20,6 +20,7 @@
             </div>
           <% end %>
     </div>
+    <% end %>
   <% else %>
 
   <div class="row flex-between">
