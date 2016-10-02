@@ -4,9 +4,9 @@
   <div class="flex-between">
     <% @myProjects.each do |t| %>
             <div class="card">
-                <!--<div class="avatar">
-                    <image_tag t.avatar.url(:thumb), class: "image-responsive" %>
-                </div>-->
+              <div class="avatar">
+                  <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
+              </div>
                 <div class="content">
                     <p class="searchable">
                       <strong><%= t.title %></strong> <br>

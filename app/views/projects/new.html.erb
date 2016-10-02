@@ -22,6 +22,9 @@
       <%= t.text_field :skills , placeholder: "Android, Ruby On Rails" , class: "form-control" %>
     </div>
     <div class="form-group">
+      <%= t.file_field :avatar %>
+    </div>
+    <div class="form-group">
       <%= t.submit "Create Project" , class: "btn btn-primary new-buttom-project" %>
     </div>
   <% end %>
