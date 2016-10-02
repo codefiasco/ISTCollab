@@ -120,6 +120,10 @@ body{
   font-size: 150%;
 }
 
+.buttom-org-show{
+  padding: 10px 25px;
+}
+
 .new-title-project{
     color: $cor4;
   //font-family: verdana;
@@ -346,9 +350,11 @@ span.tags
   width: 250px;
 }
 
+
 .token{
   float: left;
 }
 
 .token-input{
 }
+

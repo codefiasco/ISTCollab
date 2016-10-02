@@ -11,9 +11,10 @@ Rails.application.routes.draw do
 
   get 'my_organizations', to: 'organizations#my_organizations'
 
+  post 'interested', to: 'projects#interest'
+
   resources :users
   resources :projects
   resources :events
   resources :organizations
-  resources :interests
 end

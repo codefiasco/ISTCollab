@@ -9,7 +9,7 @@
   <% if @current_user.id == @project.user.id  %>
 
     <div class="row flex-between">
-        <% @project.interests.users.each do |t| %>
+        <% @people.each do |t| %>
             <div class="card">
                 <div class="avatar">
                     <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
@@ -23,7 +23,7 @@
   <% else %>
 
   <div class="row flex-between">
-      <%= link_to "Show Interest", interests_path , method: :post, class: "btn btn-default" %>
+      <%= link_to "Show Interest" , interested_path(), method: :post, class: "btn btn-default" %>
     </div>
 
   <% end %>
