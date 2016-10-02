@@ -39,11 +39,12 @@ class UsersController < ApplicationController
   def show
     set_user
     @skills = @user.skills.split(',') if @user.skills
+    @interests = @user.interests.split(',') if @user.interests
   end
 
   private
   def user_params
-    params.require(:user).permit(:name, :course, :phone_number,  :email, :interests, :skills,  :password, :avatar, :skills, :github_link, :linkedin_link)
+    params.require(:user).permit(:name, :course, :phone_number,  :email, :interests, :skills,  :password, :avatar, :skills, :github_link, :linkedin_link, :interests)
   end
 
   def set_user

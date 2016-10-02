@@ -7,7 +7,13 @@
                 <div class="col-xs-12 col-sm-8">
                     <h2><%=@user.name%></h2>
                     <p><strong>Course: </strong><%=@user.course%></p>
-                    <p><strong>Interests: </strong> Web Development, Dev Ops</p>
+										<% if @interests %>
+                    <p><strong>Interests: </strong>
+											<% @interests.each do |interest| %>
+                        <span class="tags interest"><%= interest %></span>
+											<% end %>
+                    </p>
+										<% end %>
 										<% if @skills %>
                     <p><strong>Skills: </strong>
 											<% @skills.each do |skill| %>

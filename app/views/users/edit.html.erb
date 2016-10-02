@@ -29,12 +29,19 @@
     <%= t.text_field :skills, class: "form-control", id: "skills" %>
   </div>
   <div class="form-group">
+    <p>Interests:</p>
+    <%= t.text_field :interests, class: "form-control", id: "interests" %>
+  </div>
+  <div class="form-group">
     <p>Github:</p>
     <%= t.text_field :github_link, class: "form-control", id: "skills" %>
   </div>
   <div class="form-group">
     <p>Linkedin:</p>
     <%= t.text_field :linkedin_link, class: "form-control", id: "skills" %>
+  </div>
+  <div class="form-group">
+    <%= t.file_field :avatar %>
   </div>
   <div class="form-group ">
     <%= t.submit "Save" , class: "btn btn-lg btn-primary edit-buttom-save" %>
@@ -47,8 +54,7 @@
   $(document).ready(function(){
     $('#skills').tokenfield()
     $('#skills').tokenfield('setTokens', '<%= @user.skills %>');
-    $('#skills').change(function(){
-      console.log($(this).val());
-    })
+    $('#interests').tokenfield()
+    $('#interests').tokenfield('setTokens', '<%= @user.interests %>');
   });
 </script>

@@ -12,6 +12,9 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.tags.interest{
+  background-color: #5cb85c;
+}
 .img-md{
   max-width: 100px;
   box-sizing: border-box;
@@ -402,8 +405,8 @@ span.tags
 
 /* For search box ... */
 /* enable absolute positioning */
-.inner-addon { 
-    position: relative; 
+.inner-addon {
+    position: relative;
 }
 
 /* style icon */
