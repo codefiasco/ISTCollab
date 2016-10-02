@@ -24,12 +24,33 @@ class ProjectsController < ApplicationController
 
   def show
     set_project
-#     session[:project_id] = @project.id
+    interests = @project.interests
+    if interests
+      interests = interests.split(',')
+      @people = []
+      interests.each do |user|
+        @people << User.find(user.to_i)
+      end
+    end
+    session[:project_id] = @project.id
   end
 
   def my_projects
     current_user
     @myProjects = @current_user.projects
+  end
+
+  def interest
+    project = Project.find(session[:project_id])
+    unless project.interests
+      project.interests = @current_user.id.to_s
+    else
+
+      project.interests += ',' + @current_user.id.to_s
+    end
+
+    project.save
+    redirect_to projects_path
   end
 
   private

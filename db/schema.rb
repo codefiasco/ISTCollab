@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002003621) do
+ActiveRecord::Schema.define(version: 20161002015632) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -24,10 +33,13 @@ ActiveRecord::Schema.define(version: 20161002003621) do
     t.text    "description"
   end
 
+<<<<<<< HEAD
   create_table "interests", force: :cascade do |t|
     t.integer "project_id"
   end
 
+=======
+>>>>>>> 4d0bf455e6b8ed80491e735b1050dc80316664f5
   create_table "organizations", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -44,6 +56,7 @@ ActiveRecord::Schema.define(version: 20161002003621) do
     t.string  "skills"
     t.integer "user_id"
     t.text    "description"
+    t.string  "interests"
   end
 
   create_table "users", force: :cascade do |t|
