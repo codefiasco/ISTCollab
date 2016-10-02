@@ -1,8 +1,9 @@
 class EventsController < ApplicationController
   before_action :current_user
-  
+
   def new
     @event = Event.new()
+    @categories = Category.all();
   end
 
   def create
