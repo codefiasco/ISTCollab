@@ -17,3 +17,4 @@
 //= require_tree .
 //= require dist/bootstrap-tokenfield
 //= require typedjs/dist/typed.min
+//= require search
