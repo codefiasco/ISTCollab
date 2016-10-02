@@ -67,6 +67,12 @@ class ProjectsController < ApplicationController
     redirect_to project_path(project)
   end
 
+  def destroy
+    project = Project.find(set_project)
+    project.destroy
+    redirect_to projects_path()
+  end
+
   private
   def project_params
     params.require(:project).permit(:title, :description, :skills, :category, :avatar)
