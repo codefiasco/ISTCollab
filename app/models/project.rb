@@ -1,8 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :user
   has_many :categories
-  has_one :interest
-  
+
   validates :title, presence: true,
                     uniqueness: { case_sensitive: false }
 
