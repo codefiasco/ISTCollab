@@ -3,7 +3,7 @@
     <h1 align="center" class="sub-title">Latest Projects</h1>
     <div class="flex-between">
       <% @latest_projects.each do |t| %>
-              <div class="card">
+              <div class="card proj">
                 <div class="avatar">
                     <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
                 </div>
@@ -25,7 +25,7 @@
     <h1 align="center" class="sub-title">Latest Events</h1>
     <div class="flex-between">
       <% @latest_events.each do |t| %>
-              <div class="card">
+              <div class="card event">
                 <div class="avatar">
                     <%= image_tag t.avatar.url(:thumb), class: "image-responsive" %>
                 </div>

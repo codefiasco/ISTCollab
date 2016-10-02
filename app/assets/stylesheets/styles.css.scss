@@ -22,6 +22,18 @@ body{
   margin-right: 0;
 }
 
+.event.card{
+  background-color: #F6B352;
+}
+
+.org.card{
+  background-color: #E71D36;
+}
+
+.proj.card{
+  background-color: #8FBC94;
+}
+
 /*-----------------------------HOMEPAGE-----------------------------------*/
 #new-profile{
    margin: left;
@@ -357,4 +369,3 @@ span.tags
 
 .token-input{
 }
-
