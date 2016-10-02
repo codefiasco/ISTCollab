@@ -23,10 +23,13 @@
   <% else %>
 
   <div class="row flex-between">
-      <%= link_to "Show Interest" , interested_path(), method: :post, class: "btn btn-default" %>
-    </div>
-
-  <% end %>
-
-
+    <% if @interests %>
+    <% if @interests.include?(@current_user.id.to_s) %>
+      <%= link_to "Not Interest" , uninterested_path(), method: :delete, class: "btn btn-danger" %>
+      <% end %>
+    <% else %>
+        <%= link_to "Show Interest" , interested_path(), method: :post, class: "btn btn-default" %>
+    <% end %>
+  </div>
+<% end %>
 </div>

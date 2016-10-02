@@ -26,9 +26,9 @@ class ProjectsController < ApplicationController
     set_project
     interests = @project.interests
     if interests
-      interests = interests.split(',')
+      @interests = interests.split(',')
       @people = []
-      interests.each do |user|
+      @interests.each do |user|
         @people << User.find(user.to_i)
       end
     end
@@ -49,6 +49,20 @@ class ProjectsController < ApplicationController
       project.interests += ',' + @current_user.id.to_s
     end
 
+    project.save
+    redirect_to projects_path
+  end
+
+  def uninterest
+    project = Project.find(session[:project_id])
+    interests = project.interests
+    interests = interests.split(',')
+    interests = interests.map(&:to_i)
+    interests.delete(current_user.id)
+    interests = interests.map(&:to_s)
+    interests = interests.join(',')
+    project.interests = interests
+    project.interests = nil unless project.interests.length > 0
     project.save
     redirect_to projects_path
   end
