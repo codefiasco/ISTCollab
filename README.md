@@ -1,4 +1,9 @@
-# README
+# ISTCollab
+
+## Contributors:
+- Cristiano Teixeira - [@crisgogim](https://github.com/crisgogim)
+- Francisco Machado - [@CodeFiasco](https://github.com/CodeFiasco)
+- Isabel Costa - [@isabelcosta](https://github.com/isabelcosta)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
